@@ -1,12 +1,10 @@
-def factorsnumber(num):
-    list=[]
-    for i in range(2,num+1):
-        if num%i==0:
-           list.append(i)
-    return list
-
-number = factorsnumber(13196)
-print("number of prime facotrs: {}".format(number))
-
+exe 9 :
+n= 600851475143
+i=2
+while i*i<n:
+    while n%i==0:
+        n=n/i
+    i=i+1
+print(n)
 
 exe 12:
