@@ -7,3 +7,6 @@ def factorsnumber(num):
 
 number = factorsnumber(13196)
 print("number of prime facotrs: {}".format(number))
+
+
+exe 12:
