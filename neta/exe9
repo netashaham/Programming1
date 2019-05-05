@@ -1,0 +1,9 @@
+def factorsnumber(num):
+    list=[]
+    for i in range(2,num+1):
+        if num%i==0:
+           list.append(i)
+    return list
+
+number = factorsnumber(13196)
+print("number of prime facotrs: {}".format(number))
