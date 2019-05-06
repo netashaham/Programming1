@@ -7,4 +7,16 @@ while i*i<n:
     i=i+1
 print(n)
 
-exe 12:
+exe :
+def Number1(number, b1):
+    n = 0
+    for i in number:
+        n = b1 * n + i
+    return n
+
+def Number2(n, b1):
+    number = []
+    while n > 0:
+        number.insert(0, n % b1)
+        n = n // b1
+    return number
