@@ -1,13 +1,24 @@
-exe 9 :
-n= 600851475143
-i=2
-while i*i<n:
-    while n%i==0:
-        n=n/i
-    i=i+1
-print(n)
+Q9 :
+import math
+def Factor_check(number):
+    list_Factur=[]
+    for i in range(1,int(math.sqrt(number))+1):
+        if number%i==0:
+            list_Factur.append(i)        
+            list_Factur.append(number//i)           
+    return list_Factur
 
-exe :
+def prime_check(number):
+    return len(Factor_check(number))== 2
+
+x = Factor_check(600851475143)
+largestFactor = 0
+for n in x:
+    if prime_check(n) and n>largestFactor:
+        largestFactor = n
+print(largestFactor)  
+
+Q2 :
 def Number1(number, b1):
     n = 0
     for i in number:
@@ -26,7 +37,7 @@ def Number2(n, b1):
 
 print(Base1Base2convert([],,))
 
-12:
+Q12:
 def prime(n):
     if n == 1:
         return False  
@@ -40,7 +51,7 @@ def prime(n):
     return True
 nb_prime = 1
 i = 1
-while nb_prime != 10001:
+while nb_prime != 6:
     i += 2
     if prime(i):
         nb_prime += 1
